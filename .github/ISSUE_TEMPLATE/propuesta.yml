@@ -1,0 +1,32 @@
+name: Propuesta
+description: Una idea o mejora para el servidor autohospedado.
+title: "[Propuesta]: "
+labels: ["propuesta"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qué problema resuelve
+      description: La situación que hoy es difícil o imposible, y a quién afecta.
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Qué propones
+      description: Cómo debería comportarse el servidor o el paquete.
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas que consideraste
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmacion
+    attributes:
+      label: Antes de enviarla
+      options:
+        - label: No pegué tokens, frases de paso, contenido de .env ni datos financieros de personas
+          required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Reportar una vulnerabilidad
+    url: https://github.com/Cordelia242/cuenca-selfhosted/security
+    about: Las vulnerabilidades se reportan en privado, nunca en un issue público. Sigue la política de seguridad.
+  - name: Guía de autohospedaje
+    url: https://cuenca.app/guia/autohospedaje/
+    about: Instalación, configuración, respaldos, actualización y solución de problemas.

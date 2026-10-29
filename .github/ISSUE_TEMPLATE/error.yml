@@ -1,0 +1,65 @@
+name: Error
+description: Algo del servidor autohospedado no funciona como debería.
+title: "[Error]: "
+labels: ["error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportarlo. Las vulnerabilidades no van aquí: sigue la política de seguridad (SECURITY.md).
+  - type: input
+    id: version
+    attributes:
+      label: Versión
+      description: La versión del paquete (cuenca-selfhosted-<versión>) o de la imagen del gateway.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: sistema
+    attributes:
+      label: Sistema operativo
+      description: Distribución y versión, y la versión de Docker y Docker Compose.
+      placeholder: "Debian 12, Docker 27.3, Compose v2.30"
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      description: Los comandos o acciones exactos, en orden.
+      placeholder: |
+        1. ./instalar.sh --no-interactivo ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Qué esperabas
+    validations:
+      required: true
+  - type: textarea
+    id: ocurrido
+    attributes:
+      label: Qué pasó
+      description: Incluye los mensajes de error tal como aparecieron.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostico
+    attributes:
+      label: Salida de ./diagnostico.sh
+      description: >-
+        Ejecuta ./diagnostico.sh en la carpeta del paquete y pega su salida. El informe oculta contraseñas y tokens, pero
+        revísalo antes de pegarlo y borra lo que no quieras publicar.
+      render: shell
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmacion
+    attributes:
+      label: Antes de enviarlo
+      options:
+        - label: No pegué tokens, frases de paso, contenido de .env ni datos financieros de personas
+          required: true
